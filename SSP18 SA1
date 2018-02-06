@@ -1,1 +1,79 @@
+//Exercise 1
 
+function countBy(num){
+  var returnArr = []
+  var num1 = num;
+  var num2 = num * 2;
+  var num3 = num * 3;
+  var num4 = num * 4;
+  var num5 = num * 5;
+  return returnArr.concat(num1, num2, num3, num4, num5);
+}
+
+//Exercise 2 I dont understand ow '-' is failing the test
+function shouldGradeHavePlusOrMinus (grade){
+  if (grade.pop === 8 || 9){
+    return '+';
+  }else if (grade.pop === 0 || 1){
+    return '-';
+  }else{
+    return '';
+  }
+}
+
+//Exercise 3
+
+function whoAreAtLeast30(people){
+  var nameList = [];
+ // people.forEach(function)birthday[year]{
+   for (var i = 0; i<people.length; i++){
+    if (birthday[year] < (2018 - 30)){
+       nameList.push(people.name);
+    }
+  }
+  return nameList;
+}
+
+//Self Assessment: Need to keep working on the basics
+
+Exercises
+Bare Minimum Requirements
+1. Write a function countBy which takes in a number, and returns an array of 5 numbers starting from the input value to the 5th multiple of that input value.
+
+countBy(5); // [5, 10, 15, 20, 25];
+countBy(10); // [10, 20, 30, 40, 50];
+countBy(1); // [1, 2, 3, 4, 5];
+countBy(4); // [4, 8, 12, 16, 20];
+After you write your function, you can test it using the above inputs to make sure that it behaves correctly.
+
+2. Write a function shouldGradeHavePlusOrMinus which returns a '+' sign if the input grade’s right most digit is 8 or 9, and returns a '-' sign if the input grade’s right most digit is 0 or 1. Otherwise, it should return an empty string. Assume input is a number.
+
+Your code should be able to use it like so:
+
+shouldGradeHavePlusOrMinus(89); // '+'
+shouldGradeHavePlusOrMinus(91); // '-'
+shouldGradeHavePlusOrMinus(77); // ''
+Additional Prompts
+If you have finished the Minimum Requirements section, please continue solving the following prompts until assessment time elapses even if you do not believe you have enough time to finish. Before your solutions to this section, put a console.log with favorite fruit then comment it out (leave the comments in your solution).
+
+3. Given a list of people, write a function whoAreAtLeast30 that returns a list of people’s names who will be at least 30 years old this year. Note: Assume the year is 2018.
+
+Sample input value:
+
+var people = [
+ {name : 'Sarah', birthday : { month : 'June', day : 10, year : 1980}},
+ {name : 'Alex', birthday : { month : 'August', day : 21, year : 1984}},
+ {name : 'Chris', birthday : { month : 'Feb', day : 20, year : 1983}},
+ {name : 'Kira', birthday : { month : 'October', day : 30, year : 1988}},
+ {name : 'Ana', birthday : { month : 'Jan', day : 11, year : 1990}}
+];
+Will result in:
+
+whoAreAtLeast30(people); // ['Sarah', 'Alex', 'Chris', 'Kira'];
+4. Write a function twoLargest which takes in an array of numbers, and returns the two largest numbers of the array. You can assume that there will always be at least 2 numbers in the input array.
+
+twoLargest([1, 5, 9, 7, 10, 2]); // [9, 10];
+twoLargest([2, 4, 11, 3, 1, 20]); // [11, 20];
+twoLargest([30, 1, 4, 2, 30, 0]); // [30, 30];
+twoLargest([6, 5, 5]); // [5, 6];
+twoLargest([1,2]); // [1, 2];
