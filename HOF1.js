@@ -274,3 +274,151 @@ map(numbers, num => num * 10);
 // }
 
 ////////////////////
+
+function evens(arr){
+  evenArr = [];
+  each(arr, function(element){
+    if (element % 2 === 0){
+      evenArr.push(element);
+    }
+  })
+  return evenArr;
+}
+
+evens(numbers);
+
+function multiplesOfThree(arr){
+  var of3 = [];
+  each(arr, function(x){
+    if (x%3 === 0){
+      of3.push(x);
+    }
+  })
+  return of3;
+}
+
+multiplesOfThree(numbers);
+
+function positives(arr){
+  var positiveArr = [];
+  each(arr, function(value){
+    if (value > 0){
+      positiveArr.push(value)
+    }
+  })
+  return positiveArr;
+}
+
+positives(numbers);
+
+function evenLength(arr){
+  var evenStrings = [];
+  each(arr, function(x){
+    if(x.length%2 === 0){
+      evenStrings.push(x);
+    }
+  })
+  return evenStrings;
+}
+
+evenLength(words);
+
+function filter(arr, fn){
+  var trueArr = [];
+  each(arr, function(value){
+    if(fn(value) === true){
+      trueArr.push(value);
+    }
+  })
+  return trueArr;
+}
+
+function odds(arr){
+  oddArr = [];
+  each (arr, function(x){
+    if (x%2 !== 0){
+      oddArr.push(x);
+    }
+  })
+  return oddArr;
+}
+
+function odds(arr){
+  return filter(arr, function(value){
+    if(value%2!==0){
+      return true;
+    }
+  });
+}
+
+odds(numbers);
+
+// function numberIsOdd(value) {
+//   if (value % 2 !== 0) {
+//     return true;
+//   }
+// }
+
+
+function filter(arr, fn){
+  var trueArr = [];
+  each(arr, function(value){
+    if(fn(value) === true){
+      trueArr.push(value);
+    }
+  })
+  return trueArr;
+}
+
+
+
+
+function positives(arr){
+  return filter(arr, function(value){
+    if(value >0){
+      return true;
+    }
+  })
+}
+
+positives(numbers);
+
+function negatives(arr){
+  return filter(arr, function(value){
+    if(value < 0){
+      return true;
+    }
+  })
+}
+
+negatives(numbers);
+
+function evenLength(arr){
+  return filter(arr, function(value){
+    if(value.length%2===0){
+      return true;
+    }
+  })
+}
+
+evenLength(words);
+
+function largerThanSix(arr){
+  return filter(arr, function(value){
+    if(value > 6){
+      return true;
+    }
+  })
+}
+
+largerThanSix(numbers);
+
+function startsWithChar(arr, char){
+  return filter(arr, function(value){
+    if(value[0] === char){
+      return true;
+    }
+  })
+}
+
+startsWithChar(words, 't');
